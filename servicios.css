@@ -914,5 +914,37 @@ a:hover {
 #whatsapp-btn:hover {
     background-color: #8dff21;
 }
+/* 1. Fondo principal del menú móvil (Sidebar) */
+.servicios-page .mobile-nav-active {
+    /* El fondo del menú que ocupa toda la pantalla */
+    background-color: #BEE6FF !important; 
+}
+
+/* 2. El contenedor del menú (navmenu) */
+.servicios-page #navmenu {
+    /* El contenedor interior debe tener el mismo fondo */
+    background-color: #BEE6FF !important;
+}
+/* 3. Texto del Enlace y el separador (Base: Negro) */
+.servicios-page .mobile-nav-active a {
+    color: #1A1A1A !important; 
+    /* Aseguramos que el separador sea sutil */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    font-weight: 500;
+}
+
+/* 4. Color de los iconos de Chevron (Flechas desplegables) */
+.servicios-page .mobile-nav-active .bi-chevron-down {
+    color: #1A1A1A !important;
+}
+/* 5. Hover/Activo del enlace */
+.servicios-page .mobile-nav-active a:hover,
+.servicios-page .mobile-nav-active a.active,
+.servicios-page .mobile-nav-active a:focus {
+    /* El texto se vuelve rosa */
+    color: #FFA2FF !important; 
+    /* El fondo debe ser transparente o muy sutil para que no quede un bloque sólido oscuro */
+    background-color: transparent !important; 
+}
 
   
