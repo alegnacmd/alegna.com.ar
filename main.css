@@ -3206,28 +3206,19 @@ section,
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
 }
-/* Seleccionar el item STICKER MANIA */
-.navmenu ul > li > a[href="servicios.html"] {
-  background: #FFA2FF;
-  color: #1A1A1A !important;
-  padding: 10px 16px;
-  border-radius: 10px;
+/* Estilo minimal para STICKER MANIA */
+.navmenu ul > li > a[href="servicios.html"] span {
+  color: #ff4fb6 !important;  /* rosa */
+  font-weight: 600;
   display: inline-block;
   animation: stickerFloat 4s ease-in-out infinite;
-  font-weight: 600;
 }
 
-/* Animación tipo “floating” */
+/* Animación flotante */
 @keyframes stickerFloat {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-4px); }
   100% { transform: translateY(0px); }
 }
 
-/* Hover extra */
-.navmenu ul > li > a[href="servicios.html"]:hover {
-  transform: translateY(-8px) scale(1.03);
-  background: #FF8BFF;
-  transition: 0.3s ease;
-}
 
