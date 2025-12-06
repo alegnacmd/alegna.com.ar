@@ -76,11 +76,22 @@
   <main id="main" class="servicios-page">
 
   <!-- HERO BANNER -->
-  <section class="hero-banner">
+    <section class="hero-banner">
+  <div class="container-fluid p-0">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/img/servicios/bannermobile.gif">
+
+      <source media="(min-width: 769px)" srcset="assets/img/servicios/Banners.gif">
+      
+      <img src="assets/img/servicios/Banners.gif" class="img-fluid w-100" alt="Servicios Banner">
+    </picture>
+  </div>
+</section>
+  <!--section class="hero-banner">
     <div class="container-fluid p-0">
       <img src="img/servicios/Banners.gif" class="img-fluid w-100" alt="Servicios Banner">
     </div>
-  </section>
+  </section-->
 
   <section class="categories-carousel section">
     <div class="carousel-wrapper">
