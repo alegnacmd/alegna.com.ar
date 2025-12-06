@@ -15,10 +15,10 @@
 :root {
   --nav-color: #c5ffec;  /* The default color of the main navmenu links */
   --nav-hover-color: #FFA2FF; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #1e1e1e; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #2e2e2e; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-mobile-background-color: #BEE6FF; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #BEE6FF; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #BEE6FF; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #dab9ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #FFA2FF; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 /* === PÁGINA === */
 .servicios-page {
