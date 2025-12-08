@@ -946,5 +946,9 @@ a:hover {
     /* El fondo debe ser transparente o muy sutil para que no quede un bloque sólido oscuro */
     background-color: transparent !important; 
 }
-
+.category-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
   
