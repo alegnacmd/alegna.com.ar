@@ -299,25 +299,30 @@
   <!-- Main JS File -->
   <script src="js/main.js"></script>
 <script>
-  document.getElementById("dateFilter").addEventListener("change", function () {
-    const days = this.value;
-    const cards = document.querySelectorAll(".post-card");
+  const dateFilter = document.getElementById("dateFilter");
 
-    if (days === "all") {
-      cards.forEach(card => card.style.display = "");
-      return;
-    }
+  if (dateFilter) {
+    dateFilter.addEventListener("change", function () {
+      const days = this.value;
+      const cards = document.querySelectorAll(".post-card");
 
-    const now = new Date();
+      if (days === "all") {
+        cards.forEach(card => card.style.display = "");
+        return;
+      }
 
-    cards.forEach(card => {
-      const postDate = new Date(card.getAttribute("data-date"));
-      const diff = (now - postDate) / (1000 * 60 * 60 * 24);
+      const now = new Date();
 
-      card.style.display = diff <= days ? "" : "none";
+      cards.forEach(card => {
+        const postDate = new Date(card.getAttribute("data-date"));
+        const diff = (now - postDate) / (1000 * 60 * 60 * 24);
+
+        card.style.display = diff <= days ? "" : "none";
+      });
     });
-  });
-</script>
+  }
+   </script>
+
 </body>
 
 </html>
