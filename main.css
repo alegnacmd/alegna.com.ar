@@ -3218,5 +3218,10 @@ section,
   50% { transform: translateY(-4px); }
   100% { transform: translateY(0px); }
 }
+.img-wrap .image-caption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
 
 
