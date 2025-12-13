@@ -2177,7 +2177,7 @@ section,
   }
 
   .service-details .service-visual img {
-    height: 250px;
+  height: 250px;
   }
 
   .service-details .benefits-grid {
@@ -3222,6 +3222,11 @@ section,
   font-size: 14px;
   color: #666;
   margin-top: 8px;
+}
+.contenido .service-visual img {
+    width: 60px;
+    height: 60px;
+    height: 250px;
 }
 
 
