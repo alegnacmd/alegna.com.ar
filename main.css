@@ -3229,6 +3229,14 @@ section,
   display: block;
   margin: 12px 0;
 }
+@media (max-width: 768px) {
+  .post-item .contenido img {
+    width: 70%;
+    max-width: 260px;
+    height: auto;
+  }
+}
+
 
 
 
