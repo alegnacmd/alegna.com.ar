@@ -3235,6 +3235,12 @@ section,
     max-width: 260px;
     height: auto;
   }
+@media (max-width: 768px) {
+  .service-narrative img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 }
 
 
