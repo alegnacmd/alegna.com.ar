@@ -3266,6 +3266,26 @@ section,
     max-width: 100% !important;
   }
 }
+  /* HARD containment for TikTok */
+.tiktok-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Prevent TikTok from expanding the page width */
+.tiktok-embed,
+.tiktok-embed iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Kill horizontal overflow globally (mobile only) */
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+
 
 
 
