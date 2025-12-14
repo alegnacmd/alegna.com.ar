@@ -3250,20 +3250,22 @@ section,
     height: auto;
   }
 }
-  .tiktok-wrapper {
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.tiktok-wrapper {
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
-  header {
-  position: relative;
-  z-index: 9999;
+@media (max-width: 768px) {
+  .tiktok-wrapper iframe,
+  .tiktok-wrapper blockquote {
+    max-width: 100% !important;
+  }
 }
-  .mobile-nav-toggle {
-  position: relative;
-  z-index: 10000;
-}
-
 
 
 
