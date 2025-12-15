@@ -3250,7 +3250,33 @@ section,
     height: auto;
   }
 }
+/* --- CSS DE EMERGENCIA PARA RESTAURAR EL BOTÓN --- */
 
+/* 1. Forzar la visibilidad y posición de clic */
+.mobile-nav-toggle {
+    /* Mantiene el botón visible, sin importar si otra regla dice 'display: none' o 'opacity: 0' */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* Asegura que el botón flote sobre todo y sea clickeable */
+    position: fixed !important; 
+    z-index: 10000 !important; 
+    pointer-events: auto !important; 
+
+    /* Define una posición muy clara y lejos de cualquier conflicto */
+    top: 15px !important; 
+    right: 15px !important; 
+    
+    /* Asegura un tamaño mínimo si una media query lo achicó */
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* 2. Asegurar que el header no lo tape */
+#header {
+    z-index: 9999 !important;
+}
 
 
 
