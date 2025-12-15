@@ -3290,7 +3290,37 @@ section,
         display: none !important;
     }
 }
+/* --- SOLUCIÓN DE ANULACIÓN FINAL (Para el botón de hamburguesa) --- */
 
+@media (max-width: 1200px) { /* Usamos 1200px para cubrir el rango de 1199px */
+    
+    /* 1. Anular CUALQUIER regla que lo oculte */
+    .mobile-nav-toggle {
+        /* Fuerza la aparición */
+        display: block !important; 
+        
+        /* Fuerza la posición fija, fuera del flujo del header */
+        position: fixed !important; 
+        
+        /* Capa superior, más alta que el z-index 9999 de la plantilla */
+        z-index: 10001 !important; 
+        
+        /* Asegura que es clickeable */
+        pointer-events: auto !important; 
+        
+        /* Posición visible */
+        top: 15px !important; 
+        right: 15px !important; 
+    }
+    
+    /* 2. Anular el posible display: none del contenedor padre (opcional) */
+    /* Solo si el header-social-links lo está ocultando en móvil */
+    .header-social-links {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+}
 
 
 
