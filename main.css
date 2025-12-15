@@ -3250,32 +3250,45 @@ section,
     height: auto;
   }
 }
-/* --- CSS DE EMERGENCIA PARA RESTAURAR EL BOTÓN --- */
+/* --- ÚLTIMO INTENTO: FORZAR LA VISIBILIDAD MÓVIL (ANULANDO REGLAS) --- */
 
-/* 1. Forzar la visibilidad y posición de clic */
-.mobile-nav-toggle {
-    /* Mantiene el botón visible, sin importar si otra regla dice 'display: none' o 'opacity: 0' */
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+/* 1. Asegurar que el botón NUNCA se oculte en móvil */
+@media (max-width: 1200px) { /* El ancho de Bootstrap para XL */
     
-    /* Asegura que el botón flote sobre todo y sea clickeable */
-    position: fixed !important; 
-    z-index: 10000 !important; 
-    pointer-events: auto !important; 
-
-    /* Define una posición muy clara y lejos de cualquier conflicto */
-    top: 15px !important; 
-    right: 15px !important; 
+    /* Regla para el botón de hamburguesa */
+    .mobile-nav-toggle {
+        display: flex !important; /* Debe ser visible en móvil */
+        
+        /* Posición y capa superiores */
+        position: fixed !important; 
+        z-index: 10000 !important; 
+        top: 15px !important; 
+        right: 15px !important; 
+        
+        /* Asegurarse de que el clic funcione */
+        pointer-events: auto !important; 
+        
+        /* Mantenemos la visibilidad al máximo */
+        opacity: 1 !important;
+        visibility: visible !important;
+        
+        /* Tamaño si se achicó demasiado */
+        width: 40px; 
+        height: 40px;
+    }
     
-    /* Asegura un tamaño mínimo si una media query lo achicó */
-    width: 40px !important;
-    height: 40px !important;
+    /* 2. Ocultar el menú de escritorio en móvil (si es necesario) */
+    /* Si tu menú de escritorio está causando el conflicto */
+    #navmenu {
+        display: none !important;
+    }
 }
 
-/* 2. Asegurar que el header no lo tape */
-#header {
-    z-index: 9999 !important;
+/* 3. Asegurar que el botón ESTÉ OCULTO en escritorio (para que no aparezca doble) */
+@media (min-width: 1200px) { 
+    .mobile-nav-toggle {
+        display: none !important;
+    }
 }
 
 
