@@ -328,31 +328,6 @@
     });
   }
    </script>
-   <script>
-    // Ejecuta la función una vez que toda la página haya terminado de cargar (incluido el embed de TikTok)
-    window.addEventListener('load', function() {
-        // 1. Localizar el contenedor del TikTok (donde tienes el iframe)
-        const tiktokWrapper = document.querySelector('.tiktok-wrapper');
-
-        // 2. Si se encuentra el contenedor, aplicarle la regla CSS
-        if (tiktokWrapper) {
-            
-            // CLAVE: Establecer pointer-events: none para permitir clics "a través" del contenedor.
-            // PERO solo en dispositivos móviles donde el menú está activo (max-width: 992px)
-            if (window.innerWidth <= 992) {
-                tiktokWrapper.style.pointerEvents = 'none';
-            }
-        }
-        
-        // 3. Asegurar que el botón del menú siempre responda
-        const mobileToggle = document.querySelector('.mobile-nav-toggle');
-        if (mobileToggle) {
-             // Este paso anula la regla anterior para el botón.
-             // Solo el botón y el header activo deben ser clickeables.
-             mobileToggle.style.pointerEvents = 'auto';
-        }
-    });
-</script>
 
 </body>
 
