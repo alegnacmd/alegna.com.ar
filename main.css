@@ -3276,7 +3276,7 @@ section,
 }
   /* 2. Forzar el botón de hamburguesa */
 .mobile-nav-toggle,
-.services-page .mobile-nav-toggle {
+.service-page .mobile-nav-toggle {
     z-index: 10000 !important; /* Más alto que el header */
     position: relative !important; /* A veces el z-index necesita 'position: relative' o 'fixed' para funcionar */
 }
@@ -3286,7 +3286,7 @@ section,
 }
 /* AJUSTE: Mueve el botón de hamburguesa a una posición más aislada */
 .mobile-nav-toggle,
-.services-page .mobile-nav-toggle {
+.service-page .mobile-nav-toggle {
     z-index: 10000 !important; /* Mantenemos el Z-index, por si acaso */
     position: fixed; /* Asegura que flote */
     
