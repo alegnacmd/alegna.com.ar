@@ -3296,6 +3296,20 @@ section,
     /* Y más abajo para evitar el contenido del embed si es muy alto */
     top: 25px !important; 
 }
+  /* Añade esto a tu main.css o CSS de la página de contenido */
+/* Este selector debe ser más fuerte que cualquier cosa que cree TikTok */
+.tiktok-wrapper, 
+.tiktok-wrapper * { 
+    pointer-events: none !important; 
+}
+
+/* PERO el menú DEBE ser clickeable */
+.mobile-nav-toggle,
+.mobile-nav-toggle * { 
+    pointer-events: auto !important;
+    position: fixed !important; /* Asegura la posición y el z-index */
+    z-index: 99999 !important;
+}
 
 
 
