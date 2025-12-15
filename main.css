@@ -3249,9 +3249,7 @@ section,
   }
 }
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+ z-index: 9999;
 }
 .tiktok-wrapper {
   position: relative;
@@ -3276,7 +3274,16 @@ section,
   max-width: 100% !important;
   width: 100% !important;
 }
-
+  /* 2. Forzar el botón de hamburguesa */
+.mobile-nav-toggle,
+.content-page .mobile-nav-toggle {
+    z-index: 10000 !important; /* Más alto que el header */
+    position: relative !important; /* A veces el z-index necesita 'position: relative' o 'fixed' para funcionar */
+}
+/* 3. Forzar el menú completo al abrirse */
+.mobile-nav-active {
+    z-index: 9998 !important; /* Debe estar por debajo del botón (10000) pero encima del embed */
+}
 
 
 
